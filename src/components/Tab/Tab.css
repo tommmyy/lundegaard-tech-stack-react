@@ -1,0 +1,14 @@
+.tab {
+	margin-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.tab--active {
+    border-bottom: 2px solid rgb(0, 119, 204);
+    border-color: rgb(0, 119, 204);
+}
