@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Tab = styled.a`
 	margin-right: 16px;
@@ -8,8 +8,13 @@ const Tab = styled.a`
 	font-size: 14px;
 	font-weight: 700;
 	text-decoration: none;
-	${props => props.active && 'border-bottom: 2px solid rgb(0, 119, 204)'};
-	${props => props.active && 'border-color: rgb(0, 119, 204)'};
+	${props => props.active && css`
+    	border-bottom: 2px solid ${props.theme.primary};
+    	border-color: rgb(0, 119, 204);
+  	`}
+	:hover {
+		color: red;
+	}
 `;
 
 export default Tab;
