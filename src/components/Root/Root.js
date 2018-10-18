@@ -1,7 +1,18 @@
 import React from 'react';
+import { injectGlobal } from 'styled-components';
 import Tabs from '../Tabs';
 import Tab from '../Tab';
-import './Root.css';
+
+// eslint-disable-next-line no-unused-expressions
+injectGlobal`
+	body {
+		font-family: Roboto;
+	}
+
+	p {
+		margin-bottom: 8px;
+	}
+`;
 
 const Root = () => (
 	<Tabs>
@@ -10,4 +21,5 @@ const Root = () => (
 		<Tab>Bop</Tab>
 	</Tabs>
 );
+
 export default Root;

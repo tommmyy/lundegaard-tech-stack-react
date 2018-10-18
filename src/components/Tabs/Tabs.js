@@ -1,6 +1,10 @@
-import React from 'react';
-import './Tabs.css';
+import styled from 'styled-components';
 
-const Tabs = ({ children }) => <nav className="tabs">{children}</nav>;
+const Tabs = styled.nav`
+	box-sizing: border-box;
+	display: flex;
+	border-bottom: 1px solid grey;
+	border-color: grey;
+`;
 
 export default Tabs;

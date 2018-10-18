@@ -15,7 +15,8 @@
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-hot-loader": "4.3.11",
-    "redbox-react": "1.6.0"
+    "redbox-react": "1.6.0",
+    "styled-components": "^4.0.2"
   },
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
