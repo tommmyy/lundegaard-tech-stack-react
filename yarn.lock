@@ -7026,6 +7026,11 @@ ramda-extension@0.5.1:
   resolved "https://registry.yarnpkg.com/ramda-extension/-/ramda-extension-0.5.1.tgz#94e3ebef9201c662ac17bab9077bc13389ff9886"
   integrity sha512-kbk273R3dwIi3yGNU726DrvnOj7ez0nix+/yg5oNTXmU2BmZahqCb120IjJvk7fBceqX3kknNdvLM+LZTHFoBA==
 
+ramda-extension@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/ramda-extension/-/ramda-extension-0.6.1.tgz#c4e927bdef984ad90f072ca254f6cac791637b69"
+  integrity sha512-owCJVtBU688CTp4MANRkz5us42lu7R6A7vFPkr0EVyyEeaHLB7aS04OgXXOCRGHWGKWZXhWekrXPVtJKqlykQg==
+
 ramda@0.25.0:
   version "0.25.0"
   resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
@@ -7186,14 +7191,6 @@ react-union-scripts@^0.8.1:
     webpack-hot-middleware "2.23.1"
     webpack-manifest-plugin "2.0.4"
     webpack-merge "4.1.3"
-
-react-union@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/react-union/-/react-union-0.8.1.tgz#1f813d9cd4fe0634416b245983bb099c2356d3be"
-  integrity sha512-3dnsKrRMRFUw7uk4O4YLBOZ42CLI6d5zsyqajl23doME3D8NL/uRTdNupW+v9HzEvYOwtWgqXJrWVEX/BgB40A==
-  dependencies:
-    prop-types "15.6.2"
-    ramda "0.25.0"
 
 react@16.5.2:
   version "16.5.2"

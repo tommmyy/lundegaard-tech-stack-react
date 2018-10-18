@@ -1,8 +1,5 @@
-0. Seznamte se strukturou projektu.
-- Zjistěte jak jsou komponenty rozděleny do modulů.
-- Pustěte si development server a změnit nějakou z React komponent.
-- Vybuilděte projekt a podívejte se na výstupní bundle.
-
-1. Zjistěte si, k čemu slouží knihovny - `lint-staged`, `prettier` a `husky`.
-
-2. Přidejte `union.config.js` a nastavte port pro development server na `3333`. \([Dokumentace](https://react-union.org/scripts-configuration#devserver)\)
+0. Prohlédněte si komponenty `Tab` a `Tabs`
+1. V `.eslintrc` odstraňte rule `react/prop-types` a následně opravte chyby.
+2. Přepište Tab.css a Tabs.css do BEM.
+3. V komponentách `Tab` a `Tabs` není zohledněna vstupní property `className`.
+4. Zrefaktorujte pomocí funkce `cx` z `ramda-extension`.

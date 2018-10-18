@@ -1,0 +1,6 @@
+.tabs {
+	box-sizing: border-box;
+    display: flex;
+    border-bottom: 1px solid grey;
+    border-color: grey;
+}

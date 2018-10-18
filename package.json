@@ -11,6 +11,7 @@
     "@babel/polyfill": "7.0.0",
     "classnames": "2.2.6",
     "prop-types": "15.6.2",
+    "ramda-extension": "^0.6.1",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-hot-loader": "4.3.11",
