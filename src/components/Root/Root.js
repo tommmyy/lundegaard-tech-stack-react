@@ -10,4 +10,5 @@ const Root = () => (
 		<Tab>Bop</Tab>
 	</Tabs>
 );
+
 export default Root;
