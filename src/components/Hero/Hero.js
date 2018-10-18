@@ -2,6 +2,6 @@ import React from 'react';
 
 import logo from './logo.png';
 
-const Root = () => <img src={logo} />;
+const Hero = () => <img src={logo} />;
 
-export default Root;
+export default Hero;
