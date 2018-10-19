@@ -2,4 +2,6 @@ node_modules/*
 build/*
 stats.json
 docs/node_modules/*
+packages/union-app-formik/node_modules/*
 packages/union-components/node_modules/*
+packages/union-components-formik/node_modules/*
