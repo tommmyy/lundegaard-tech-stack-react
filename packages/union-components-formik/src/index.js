@@ -21,4 +21,4 @@ const createAdapter = NextComponent => {
 };
 
 export const TextField = createAdapter(fromComponents.TextField);
-export const TextArea = createAdapter(fromComponents.TextArea);
+export const TextAreaField = createAdapter(fromComponents.TextAreaField);

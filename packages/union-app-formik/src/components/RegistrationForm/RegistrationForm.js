@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextField } from 'union-components-formik';
+import { TextField, TextAreaField } from 'union-components-formik';
 import { Field, Formik } from 'formik';
 import { noop } from 'ramda-extension';
 
@@ -26,16 +26,11 @@ const RegistrationForm = ({ onSubmit }) => (
 
 				<Field component={TextField} name="email" label="Email" />
 
-				<div>
-					<label htmlFor="message">Message:</label>
-					<textarea
-						id="message"
-						name="message"
-						value={values.message}
-						onChange={handleChange}
-					/>
-					{errors.message && <p>{errors.message}</p>}
-				</div>
+				<Field
+					component={TextAreaField}
+					name="message"
+					label="Message"
+				/>
 
 				<div>
 					<label htmlFor="lang">Favourite language:</label>
