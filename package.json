@@ -1,5 +1,5 @@
 {
-  "name": "react-union-boilerplate-basic",
+  "name": "react-union-boilerplate-monorepo",
   "version": "0.8.1",
   "private": true,
   "license": "MIT",
@@ -7,16 +7,9 @@
   "engines": {
     "node": ">=8"
   },
-  "dependencies": {
-    "@babel/polyfill": "7.0.0",
-    "classnames": "2.2.6",
-    "prop-types": "15.6.2",
-    "react": "16.5.2",
-    "react-dom": "16.5.2",
-    "react-hot-loader": "4.3.11",
-    "react-union": "^0.8.1",
-    "redbox-react": "1.6.0"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.0.0",
@@ -36,15 +29,10 @@
   },
   "scripts": {
     "build": "react-union-scripts build",
-    "start": "react-union-scripts start --app SampleApp",
+    "start": "react-union-scripts start --app union-app-sample-app",
     "test": "react-union-scripts test",
     "lint": "yarn lint:eslint",
     "lint:eslint": "eslint --ext .js ./"
-  },
-  "jest": {
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ]
   },
   "lint-staged": {
     "linters": {
@@ -54,5 +42,10 @@
         "git add"
       ]
     }
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   }
 }
