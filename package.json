@@ -24,15 +24,17 @@
     "eslint-plugin-react": "7.11.1",
     "husky": "1.1.2",
     "lint-staged": "7.3.0",
+    "plop": "^2.1.0",
     "prettier": "1.14.3",
     "react-union-scripts": "^0.8.1"
   },
   "scripts": {
     "build": "react-union-scripts build",
-    "start": "react-union-scripts start --app union-app-sample-app",
+    "start": "react-union-scripts start --app union-app-formik",
     "test": "react-union-scripts test",
     "lint": "yarn lint:eslint",
-    "lint:eslint": "eslint --ext .js ./"
+    "lint:eslint": "eslint --ext .js ./",
+    "generate": "plop --plopfile ./.plop/plopfile.js"
   },
   "lint-staged": {
     "linters": {
