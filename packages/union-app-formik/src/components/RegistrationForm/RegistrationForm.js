@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { TextField, TextAreaField } from 'union-components-formik';
 import { Field, Formik } from 'formik';
 import { noop } from 'ramda-extension';
+import { Button, ButtonOutline, Box, Card } from 'rebass';
 
 const initialValues = {
 	name: '',
@@ -15,54 +16,43 @@ const initialValues = {
 const validate = (/* values */) => ({ name: 'Error!', message: 'Error!' });
 
 const RegistrationForm = ({ onSubmit }) => (
-	<Formik
-		onSubmit={onSubmit}
-		validate={validate}
-		initialValues={initialValues}
-	>
+	<Formik onSubmit={onSubmit} validate={validate} initialValues={initialValues}>
 		{({ handleSubmit, handleReset, handleChange, errors, values }) => (
 			<form onSubmit={handleSubmit}>
-				<Field component={TextField} name="name" label="Name" />
+				<Card width={256} boxShadow="0px 0px 8px 0px rgba(0,0,0,0.5)">
+					<Field component={TextField} name="name" label="Name" />
 
-				<Field component={TextField} name="email" label="Email" />
+					<Field component={TextField} name="email" label="Email" />
 
-				<Field
-					component={TextAreaField}
-					name="message"
-					label="Message"
-				/>
+					<Field component={TextAreaField} name="message" label="Message" />
 
-				<div>
-					<label htmlFor="lang">Favourite language:</label>
-					<select
-						id="lang"
-						name="lang"
-						value={values.lang}
-						onChange={handleChange}
-					>
-						<option value="" />
-						<option value="js">JavaScript</option>
-						<option value="cljs">Java</option>
-					</select>
-					{errors.message && <p>{errors.message}</p>}
-				</div>
-
-				<div>
-					<label>
-						<input
-							type="checkbox"
-							name="terms"
-							checked={values.terms}
+					<Box>
+						<label htmlFor="lang">Favourite language:</label>
+						<select
+							id="lang" name="lang" value={values.lang}
 							onChange={handleChange}
-						/>
-						Do you agree with our terms of conditions?
-					</label>
-				</div>
+						>
+							<option value="" />
+							<option value="js">JavaScript</option>
+							<option value="cljs">Java</option>
+						</select>
+						{errors.lang && <p>{errors.lang}</p>}
+					</Box>
 
-				<button type="submit">Submit</button>
-				<button type="button" onClick={handleReset}>
-					Reset
-				</button>
+					<Box>
+						<label>
+							<input
+								type="checkbox" name="terms" checked={values.terms}
+								onChange={handleChange}
+							/>
+							Do you agree with our terms of conditions?
+						</label>
+					</Box>
+					<Button type="submit">Submit</Button>
+					<ButtonOutline type="button" onClick={handleReset}>
+						Reset
+					</ButtonOutline>
+				</Card>
 			</form>
 		)}
 	</Formik>

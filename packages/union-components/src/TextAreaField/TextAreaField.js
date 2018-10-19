@@ -1,15 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Box, Text } from 'rebass';
 
 const TextAreaField = ({ error, label, id, name, ...other }) => (
-	<div>
-		{label && <label htmlFor={id || name}>{label}</label>}
-		<textarea
-			type="text" id={id || name} name={name}
-			{...other}
-		/>
-		{error && <p>{error}</p>}
-	</div>
+	<Box mb={2}>
+		{label && (
+			<Box>
+				<label htmlFor={id || name}>{label}</label>
+			</Box>
+		)}
+		<Box>
+			<textarea id={id || name} name={name} {...other} />
+		</Box>
+		<Box>
+			{error && (
+				<Text fontSize={12} color="red">
+					{error}
+				</Text>
+			)}
+		</Box>
+	</Box>
 );
 
 TextAreaField.propTypes = {

@@ -1,21 +1,15 @@
 import React from 'react';
 import * as fromComponents from 'union-components';
 
-const getDisplayName = Component =>
-	Component.displayName || Component.name || 'Component';
+const getDisplayName = (Component) => Component.displayName || Component.name || 'Component';
 
-const createAdapter = NextComponent => {
+const createAdapter = (NextComponent) => {
 	const FormikAdapter = ({ field, form: { touched, errors }, ...rest }) => {
-		const error =
-			touched[field.name] && errors[field.name]
-				? errors[field.name]
-				: undefined;
-		return <NextComponent error={error} {...rest} />;
+		const error = touched[field.name] && errors[field.name] ? errors[field.name] : undefined;
+		return <NextComponent error={error} {...field} {...rest} />;
 	};
 
-	FormikAdapter.displayName = `createAdapter(${getDisplayName(
-		NextComponent
-	)})`;
+	FormikAdapter.displayName = `createAdapter(${getDisplayName(NextComponent)})`;
 
 	return FormikAdapter;
 };
